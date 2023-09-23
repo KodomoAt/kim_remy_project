@@ -1,0 +1,12 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    width: 100%;
+    gap: 0.7rem;
+}
+
+.header__logoMenu{
+    display: flex;
+    gap: 0.7rem;
+}

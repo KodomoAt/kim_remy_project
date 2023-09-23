@@ -1,0 +1,19 @@
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    border-bottom: #fff solid 0.4rem;
+}
+
+.menu a.active {
+    border-bottom: #395A5F solid 0.4rem;
+
+}
