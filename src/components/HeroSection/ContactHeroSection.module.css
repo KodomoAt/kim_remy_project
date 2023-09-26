@@ -1,0 +1,23 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: .5rem;
+}
+
+
+@media screen and (max-width: 500px)  {
+
+
+    .contact div {
+       flex-direction: column;
+    }
+
+
+}
