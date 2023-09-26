@@ -1,8 +1,9 @@
-.services{
+.services {
     text-align: center;
     margin: auto;
 }
-.services div{
+
+.services__title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,4 +19,26 @@
 /* Style pour le texte dans le h1 */
 .services div h1 {
     padding: 0 10px; /* Ajoute un peu d'espace autour du texte du h1 */
+}
+
+.services__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    grid-gap: 20px;
+
+}
+
+
+
+@media screen and (max-width: 1140px ) {
+    .services__cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 720px ) {
+    .services__cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
