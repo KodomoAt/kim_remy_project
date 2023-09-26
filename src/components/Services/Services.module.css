@@ -1,0 +1,21 @@
+.services{
+    text-align: center;
+    margin: auto;
+}
+.services div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Style pour les traits horizontaux */
+.services__title__trait {
+    border: .15rem solid #395A5F; /* Vous pouvez personnaliser la couleur et l'épaisseur du trait ici */
+    width: 5rem;
+}
+
+/* Style pour le texte dans le h1 */
+.services div h1 {
+    padding: 0 10px; /* Ajoute un peu d'espace autour du texte du h1 */
+}
