@@ -24,7 +24,8 @@ const Services = () => {
                     shortDescription : data[key].shortDescription,
                     price : data[key].price,
                     duration : data[key].duration,
-                    people : data[key].public
+                    people : data[key].public,
+                    imgURL : data[key].imgURL
                 })
             }
 
@@ -39,6 +40,7 @@ const Services = () => {
         fetchServicesHandler()
 
     }, [fetchServicesHandler]);
+    //TODO: Render image dynamic
   return <div className={classes.services}>
       {error}
       <div className={classes['services__title']}>
@@ -48,7 +50,7 @@ const Services = () => {
       </div>
       <div className={classes['services__cards']}>
           {services.map((service)=>(
-              <Card title={service.title} key={service.id} shortDescription={service.shortDescription} price={service.price} duration={service.duration} people={service.people}/>
+              <Card title={service.title} imgURL={service.imgURL} key={service.id} shortDescription={service.shortDescription} price={service.price} duration={service.duration} people={service.people}/>
           ))}
 
       </div>

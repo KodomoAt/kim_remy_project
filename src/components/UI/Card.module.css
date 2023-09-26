@@ -1,7 +1,7 @@
 .card{
     border: 1px solid #395A5F;
     border-radius: 30px;
-    max-width: 24rem;
+    max-width: 30rem;
     display: flex;
     flex-direction: column;
     align-self:stretch;
@@ -34,10 +34,10 @@
 .card__content__title{
     font-size: 1.1rem;
     font-weight: 700;
-    letter-spacing: 1px;
     text-transform: capitalize;
     margin: 0;
 }
-.card__content__title h5{
+.card__content__title h4{
     margin: 0 .4rem .4rem .4rem;
+    color: #395A5F;
 }

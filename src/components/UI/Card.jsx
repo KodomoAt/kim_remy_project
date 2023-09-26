@@ -7,7 +7,7 @@ const Card = (props) => {
     return <div className={classes.card}>
 
         <a href="">
-            <img src="https://picsum.photos/seed/picsum/500/300" alt=""/>
+            <img src={props.imgURL} alt={props.imgDescription}/>
         </a>
 
         <div>
@@ -18,9 +18,9 @@ const Card = (props) => {
 
         <div className={classes["card__content"]}>
             <a href="#" className={classes['card__content__title']}>
-                <h5>
+                <h4>
                     {props.title}
-                </h5>
+                </h4>
             </a>
             <div>
                 {props.shortDescription}
