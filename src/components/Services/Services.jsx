@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from "axios";
 import classes from './Services.module.css'
-import Card from "../UI/Card.jsx";
+import Service from "./Service.jsx";
 const Services = () => {
     const [services, setServices] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -50,7 +50,7 @@ const Services = () => {
       </div>
       <div className={classes['services__cards']}>
           {services.map((service)=>(
-              <Card title={service.title} imgURL={service.imgURL} key={service.id} shortDescription={service.shortDescription} price={service.price} duration={service.duration} people={service.people}/>
+              <Service title={service.title} imgURL={service.imgURL} key={service.id} shortDescription={service.shortDescription} price={service.price} duration={service.duration} people={service.people}/>
           ))}
 
       </div>

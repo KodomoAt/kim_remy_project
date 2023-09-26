@@ -1,9 +1,10 @@
-import classes from './Card.module.css'
-import Badge from "./Badge.jsx";
-import price from '../../assets/UI/badge_price.png'
-import sablier from '../../assets/UI/badge_sablier.png'
-import people from '../../assets/UI/badge_people.png'
-const Card = (props) => {
+import classes from "./Service.module.css";
+import Badge from "../UI/Badge.jsx";
+import price from "../../assets/UI/badge_price.png";
+import sablier from "../../assets/UI/badge_sablier.png";
+import people from "../../assets/UI/badge_people.png";
+
+const Service = (props) => {
     return <div className={classes.card}>
 
         <a href="">
@@ -27,7 +28,5 @@ const Card = (props) => {
             </div>
         </div>
     </div>
-
-};
-
-export default Card;
+}
+export default Service;

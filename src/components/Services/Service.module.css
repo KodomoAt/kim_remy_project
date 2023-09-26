@@ -5,17 +5,19 @@
     display: flex;
     flex-direction: column;
     align-self:stretch;
+    transition: transform .3s ease-in-out;
+
 }
 
-.card:hover{
-    & a img{
-
-    }
+.card:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.2);
 }
 .card a {
     text-decoration: none;
     color: inherit;
     display: block;
+    overflow: hidden;
 }
 
 .card a img {
@@ -25,6 +27,9 @@
     max-width: 100%;
     display: block;
     vertical-align: middle;
+    transition: transform .4s ease-in-out;
+
+
 
 }
 
