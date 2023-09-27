@@ -1,4 +1,5 @@
 import classes from './DescriptionHeroSection.module.css'
+
 const DescriptionHeroSection = () => {
     return <div className={classes['hero_section']}>
         <div className={classes['hero_section__title']}>
@@ -6,12 +7,12 @@ const DescriptionHeroSection = () => {
                 Je suis <span>Kim Rémy !</span>
             </h1>
             <h1>
-                Énergéticien certifiée.
+                Énergéticien magnétiseuse <span>depuis 2018</span>.
             </h1>
         </div>
         <div className={classes['hero_section__description']}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui
-            mattis dui, non pulvinar lorem felis nec erat
+            Je vous propose de mettre en lumière vos ressources intérieures, en vous aidant à libérer votre énergie
+            vitale et à réaliser votre plein potentiel dans tous les aspects de votre vie.
         </div>
 
     </div>

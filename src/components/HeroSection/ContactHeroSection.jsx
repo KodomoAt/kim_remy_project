@@ -10,8 +10,8 @@ const ContactHeroSection = () => {
                 <div>
                     <img src={phone} alt="Icône représentant un téléphone"/>
                 </div>
-                <a href="tel:0600000000">
-                    06.00.00.00.00
+                <a href="tel:0686427949">
+                    06.86.42.79.49
                 </a>
             </div>
             <div>
@@ -28,7 +28,7 @@ const ContactHeroSection = () => {
                 <img src={address} alt="Icône représentant un point GPS"/>
             </div>
             <a href={"geo:45.2135945,1.6485671"}>
-                3 rue du magnétisme 19000 Brive
+                22 résidence des Châtaigniers,<br/> 19560 ST HILAIRE PEYROUX
             </a>
         </div>
     </div>
