@@ -8,7 +8,7 @@ import BurgerBtn from "./BurgerBtn.jsx";
 import {useState} from "react";
 import ResponsiveMenu from "./ResponsiveMenu.jsx";
 
-const Header = () => {
+const Header = (props) => {
     const [isOpen, setIsOpen] = useState(false)
     const clickOpenHandler = () => {
       setIsOpen(prevState => !prevState)
@@ -17,7 +17,7 @@ const Header = () => {
     return <header className={classes.header}>
         <div className={classes.header__logoMenu}>
             <LogoIcon/>
-            <Menu/>
+            <Menu activeSection={props.activeSection}/>
         </div>
 
         <BookingBtn/>

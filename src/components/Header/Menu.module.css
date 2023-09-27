@@ -1,6 +1,7 @@
 nav {
     display: flex;
     align-items: center;
+
 }
 
 .menu {
@@ -8,6 +9,7 @@ nav {
     justify-content: flex-start;
     align-items: center;
     gap: 30px;
+
 
 }
 
@@ -18,6 +20,7 @@ nav {
     color: black;
     border-bottom: #fff solid 0.4rem;
     position: relative;
+    cursor: pointer;
 
     &:after {
         content: "";

@@ -41,8 +41,8 @@ const Services = () => {
 
     }, [fetchServicesHandler]);
     //TODO: Render image dynamic
-  return <div className={classes.services}>
-      {error}
+  return <section id={"services"} className={classes.services}>
+
       <div className={classes['services__title']}>
           <div className={classes['services__title__trait']}></div>
           <h1>Services</h1>
@@ -56,7 +56,7 @@ const Services = () => {
       </div>
 
 
-  </div>
+  </section>
 }
 
 export default Services;

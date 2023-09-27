@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 import './App.css'
 import Header from "./components/Header/Header.jsx";
@@ -7,10 +7,13 @@ import Services from "./components/Services/Services.jsx";
 
 function App() {
 
+    const [activeSection, setActiveSection] = useState(null);
+
+
 
     return (
         <>
-            <Header/>
+            <Header activeSection={activeSection}/>
             <HeroSection/>
             <Services/>
 

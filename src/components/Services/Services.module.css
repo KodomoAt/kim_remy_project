@@ -17,8 +17,9 @@
 }
 
 /* Style pour le texte dans le h1 */
-.services div h1 {
+.services__title h1 {
     padding: 0 10px; /* Ajoute un peu d'espace autour du texte du h1 */
+    font-size: 1.8rem;
 }
 
 .services__cards {

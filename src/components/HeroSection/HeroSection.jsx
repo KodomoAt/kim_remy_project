@@ -4,7 +4,7 @@ import DescriptionHeroSection from "./DescriptionHeroSection.jsx";
 import PhotoHeroSection from "./PhotoHeroSection.jsx";
 
 const HeroSection = () => {
-    return <div className={classes.hero_section}>
+    return <section id={'accueil'} className={classes.hero_section}>
         <div>
             <ContactHeroSection/>
             <DescriptionHeroSection/>
@@ -13,7 +13,7 @@ const HeroSection = () => {
             <PhotoHeroSection/>
         </div>
 
-    </div>
+    </section>
 }
 
 export default HeroSection;

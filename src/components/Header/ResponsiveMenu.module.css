@@ -48,6 +48,7 @@
     line-height: 2rem;
     text-decoration: none;
     color: #395A5F;
+    cursor: pointer;
     &.active{
         border-bottom: #395A5F solid .3rem;
     }
