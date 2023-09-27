@@ -2,7 +2,7 @@ import classes from './LogoIcon.module.css'
 import logo from '../../assets/header/logo.svg'
 const LogoIcon = () => {
 return <div className={classes.logo}>
-    <img src={logo} alt="test"/>
+    <img src={logo} alt="Logo du cabinet Kim énergéticienne représentant les initiales de Kim Rémy"/>
 </div>
 };
 

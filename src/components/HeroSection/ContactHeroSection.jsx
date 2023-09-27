@@ -8,28 +8,28 @@ const ContactHeroSection = () => {
         <div>
             <div>
                 <div>
-                    <img src={phone} alt=""/>
+                    <img src={phone} alt="Icône représentant un téléphone"/>
                 </div>
-                <div>
+                <a href="tel:0600000000">
                     06.00.00.00.00
-                </div>
+                </a>
             </div>
             <div>
                 <div>
-                    <img src={email} alt=""/>
+                    <img src={email} alt="Icône représentant le signe @ d'une adresse e-mail"/>
                 </div>
-                <div>
+                <a href={"mailto: cristal.remy@gmail.com"}>
                     cristal.remy@gmail.com
-                </div>
+                </a>
             </div>
         </div>
         <div>
             <div>
-                <img src={address} alt=""/>
+                <img src={address} alt="Icône représentant un point GPS"/>
             </div>
-            <div>
+            <a href={"geo:45.2135945,1.6485671"}>
                 3 rue du magnétisme 19000 Brive
-            </div>
+            </a>
         </div>
     </div>
 };
