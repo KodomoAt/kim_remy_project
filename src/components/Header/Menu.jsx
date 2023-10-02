@@ -3,6 +3,7 @@ import menu from '../../assets/header/menu-64.png'
 import {useEffect, useState} from "react";
 
 const Menu = (props) => {
+    //TODO: Refactor this code because in double with menuResponsive
     const [activeSection, setActiveSection] = useState(null);
     useEffect(() => {
         const handleScroll = () => {
@@ -28,9 +29,8 @@ const Menu = (props) => {
 
     const handleMenuClick = (targetId) => {
         const targetSection = document.getElementById(targetId);
-        console.log(targetSection)
         if (targetSection) {
-            targetSection.scrollIntoView( {behavior: "smooth", block: "end" });
+            targetSection.scrollIntoView( {behavior: "smooth", block: "start" });
         }
     };
 

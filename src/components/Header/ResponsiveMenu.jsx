@@ -3,6 +3,7 @@ import closeBtn from "../../assets/header/closeBtn.png";
 import {useEffect, useState} from "react";
 
 const ResponsiveMenu = (props) => {
+    //TODO: Refactor this code because in double with menu
     const [activeSection, setActiveSection] = useState(null);
     useEffect(() => {
         const handleScroll = () => {
@@ -29,8 +30,7 @@ const ResponsiveMenu = (props) => {
     const handleMenuClick = (targetId) => {
         const targetSection = document.getElementById(targetId);
         if (targetSection) {
-            targetSection.scrollIntoView( {behavior: "smooth", block: "center" });
-            props.onClick();
+            targetSection.scrollIntoView( {behavior: "smooth", block: "start" });
         }
     };
   return <div className={`${classes['responsive-menu']} ${props.isOpen ? classes.open:''}`} >
