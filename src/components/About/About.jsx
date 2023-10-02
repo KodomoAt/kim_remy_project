@@ -1,7 +1,7 @@
 import classes from './About.module.css';
 import React from "react";
 const About = () => {
-return <section className={classes.about}>
+return <section id={"about"} className={classes.about}>
 
     <div className={classes['about__title']}>
         <div className={classes['about__title__trait']}></div>
