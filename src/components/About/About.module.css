@@ -1,0 +1,23 @@
+.about {
+    text-align: center;
+    margin: auto;
+}
+
+.about__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Style pour les traits horizontaux */
+.about__title__trait {
+    border: .15rem solid #395A5F; /* Vous pouvez personnaliser la couleur et l'épaisseur du trait ici */
+    width: 5rem;
+}
+
+/* Style pour le texte dans le h1 */
+.about__title h2 {
+    padding: 0 10px; /* Ajoute un peu d'espace autour du texte du h1 */
+    font-size: 1.8rem;
+}

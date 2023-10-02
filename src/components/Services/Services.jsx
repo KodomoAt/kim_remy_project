@@ -45,7 +45,7 @@ const Services = () => {
 
       <div className={classes['services__title']}>
           <div className={classes['services__title__trait']}></div>
-          <h1>Services</h1>
+          <h2>Services</h2>
           <div className={classes['services__title__trait']}></div>
       </div>
       <div className={classes['services__cards']}>

@@ -4,6 +4,7 @@ import './App.css'
 import Header from "./components/Header/Header.jsx";
 import HeroSection from "./components/HeroSection/HeroSection.jsx";
 import Services from "./components/Services/Services.jsx";
+import About from "./components/About/About.jsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
             <Header activeSection={activeSection}/>
             <HeroSection/>
             <Services/>
+            <About/>
 
         </>
     )
