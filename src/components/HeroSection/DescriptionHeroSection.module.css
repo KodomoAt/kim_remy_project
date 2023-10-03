@@ -3,6 +3,7 @@
 }
 .hero_section__title h1{
     margin: 0;
+    font-size: 3rem;
 }
 .hero_section__title h1 span{
     color: #395A5F;
@@ -26,4 +27,8 @@
 
 
     }
+}
+
+.hero_section__button{
+ margin-top: 1rem;
 }
