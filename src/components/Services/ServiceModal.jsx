@@ -5,7 +5,7 @@ const ServiceModal = (props) => {
     //TODO: Add modal content here
     return <Modal onClick={props.onClick}>
 
-        <h1>TEST</h1>
+        <h1>{props.service.title}</h1>
     </Modal>
 };
 

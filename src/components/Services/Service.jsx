@@ -7,7 +7,7 @@ import people from "../../assets/UI/badge_people.png";
 const Service = (props) => {
     return <div className={classes.card}>
 
-        <a onClick={props.onShowServiceModal}>
+        <a onClick={()=>props.onShowServiceModal(props.id)}>
             <img src={props.imgURL} alt={props.imgDescription}/>
         </a>
 
@@ -18,7 +18,7 @@ const Service = (props) => {
         </div>
 
         <div className={classes["card__content"]}>
-            <a onClick={props.onShowServiceModal} className={classes['card__content__title']}>
+            <a onClick={()=>props.onShowServiceModal(props.id)} className={classes['card__content__title']}>
                 <h4>
                     {props.title}
                 </h4>

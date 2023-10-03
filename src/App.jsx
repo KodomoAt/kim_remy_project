@@ -11,22 +11,16 @@ import ReactDOM from "react-dom";
 const portalElement = document.getElementById('footer')
 function App() {
 
-    const [serviceModalIsShown, setServiceModalIsShown] = useState(false);
-    const showServiceModalHandler = () => {
-        setServiceModalIsShown(true);
-    }
-    const hideServiceModalHandler = () => {
-        setServiceModalIsShown(false)
-    }
+
 
 
 
     return (
         <>
-            {serviceModalIsShown && <ServiceModal onClick={hideServiceModalHandler}/>}
+
             <Header/>
             <HeroSection/>
-            <Services onShowServiceModal={showServiceModalHandler}/>
+            <Services />
             <About/>
             {ReactDOM.createPortal(<Footer/>,portalElement)}
 
