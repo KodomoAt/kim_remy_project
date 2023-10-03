@@ -8,7 +8,7 @@ import BurgerBtn from "./BurgerBtn.jsx";
 import {useEffect, useState} from "react";
 import ResponsiveMenu from "./ResponsiveMenu.jsx";
 
-const Header = (props) => {
+const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState(null);
     useEffect(() => {

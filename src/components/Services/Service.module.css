@@ -18,6 +18,7 @@
     color: inherit;
     display: block;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .card a img {
