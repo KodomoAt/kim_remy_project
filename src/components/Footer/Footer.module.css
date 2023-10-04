@@ -1,8 +1,12 @@
+footer{
+
+    width:100vw;
+}
 .footer{
     background:#395A5F;
     padding:30px 0px;
     text-align:center;
-    width:100%;
+
     border-top-left-radius: .7rem;
     border-top-right-radius: .7rem;
 
