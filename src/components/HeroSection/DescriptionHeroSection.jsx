@@ -6,10 +6,10 @@ const DescriptionHeroSection = () => {
         <div className={classes['hero_section']}>
             <div className={classes['hero_section__title']}>
                 <h1>
-                    Je suis <span>Kim Rémy !</span>
+                    Je suis <span>Kim RÉMY !</span>
                 </h1>
                 <h1>
-                    Énergéticien magnétiseuse <span>depuis 2018</span>.
+                    Énergéticienne magnétiseuse <span>depuis 2018</span>.
                 </h1>
             </div>
             <div className={classes['hero_section__description']}>

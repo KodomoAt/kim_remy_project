@@ -28,7 +28,7 @@ const ContactHeroSection = () => {
                 <img src={address} alt="Icône représentant un point GPS"/>
             </div>
             <a href={"geo:45.2135945,1.6485671"}>
-                22 résidence des Châtaigniers,<br/> 19560 ST HILAIRE PEYROUX
+                22 impasse des Châtaigniers,<br/> 19560 ST HILAIRE PEYROUX
             </a>
         </div>
     </div>
