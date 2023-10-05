@@ -21,3 +21,10 @@
     padding: 0 10px; /* Ajoute un peu d'espace autour du texte du h1 */
     font-size: 1.8rem;
 }
+
+@media screen and (max-width: 720px ) {
+
+    .about__title__trait {
+        width: 2rem;
+    }
+}

@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import  {useState, useEffect, useCallback} from 'react';
 import axios from "axios";
 import classes from './Services.module.css'
 import Service from "./Service.jsx";
@@ -11,14 +11,14 @@ const Services = (props) => {
     const [error, setError] = useState(null);
     const [serviceModalIsShown, setServiceModalIsShown] = useState(false);
     const showServiceModalHandler = (id) => {
+        document.body.classList.add('modal-open');
         const service = services.find(service => service.id === id);
         setServiceModalIsShown(true);
         setServiceSelected(service)
-        console.log(service)
-        console.log(id)
+
     }
     const hideServiceModalHandler = () => {
-
+        document.body.classList.remove('modal-open');
         setServiceModalIsShown(false)
 
 
@@ -42,7 +42,8 @@ const Services = (props) => {
                     price: data[key].price,
                     duration: data[key].duration,
                     people: data[key].public,
-                    imgURL: data[key].imgURL
+                    imgURL: data[key].imgURL,
+                    progress: data[key].progress
                 })
             }
 

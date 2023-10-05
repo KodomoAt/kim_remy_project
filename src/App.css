@@ -18,4 +18,9 @@
   }
 }
 
-
+@media (orientation: landscape) {
+  #root {
+    padding: .7rem;
+    overflow-x: hidden;
+  }
+}
