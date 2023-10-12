@@ -1,0 +1,87 @@
+.contact-form{
+    width: 100%;
+    overflow: hidden;
+
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+}
+.form-group label {
+    font-size: 1.1rem;
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+
+.form-control{
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 4px;
+    height: 36px;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-control:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: #395A5F;
+    outline: 0;
+
+
+
+}
+
+.form-control--textarea{
+
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    resize: vertical;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    padding: 6px;
+    margin-bottom: .4rem;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.form-control--textarea:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: #495057;
+    outline: 0;
+
+
+}
+
+.form-control__alert{
+    color: red;
+    text-align: left;
+    margin-top: 0;
+}
+
+.loader {
+    width: 18px;
+    height: 18px;
+    border: 5px solid #fff;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

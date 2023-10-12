@@ -1,0 +1,45 @@
+.contact__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Style pour les traits horizontaux */
+.contact__title__trait {
+    border: .15rem solid #395A5F; /* Vous pouvez personnaliser la couleur et l'épaisseur du trait ici */
+    width: 5rem;
+}
+
+/* Style pour le texte dans le h1 */
+.contact__title h2 {
+    padding: 0 10px; /* Ajoute un peu d'espace autour du texte du h1 */
+    font-size: 1.8rem;
+}
+
+@media screen and (max-width: 720px ) {
+
+    .contact__title__trait {
+        width: 2rem;
+    }
+}
+
+.contact{
+    display: flex;
+    width: 95%;
+   margin: auto;
+    border-radius: 30px;
+    -webkit-box-shadow: 5px 2px 15px -4px rgba(0,0,0,0.77);
+    box-shadow: 5px 2px 15px -4px rgba(0,0,0,0.77);
+    padding: 1rem .4rem .4rem;
+
+}
+
+@media screen and (max-width: 986px) {
+    .contact {
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+    }
+}

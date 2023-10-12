@@ -7,6 +7,7 @@ import Services from "./components/Services/Services.jsx";
 import About from "./components/About/About.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import ReactDOM from "react-dom";
+import {Contact} from "./components/Contact/Contact.jsx";
 const portalElement = document.getElementById('footer')
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
             <Services />
             <About/>
             {ReactDOM.createPortal(<Footer/>,portalElement)}
+            <Contact/>
 
         </>
     )
