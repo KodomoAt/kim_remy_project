@@ -27,9 +27,13 @@ const Service = (props) => {
             <div>
                 {props.shortDescription}
             </div>
-            <Button onClick={()=>props.onShowServiceModal(props.id)}>En savoir +</Button>
-        </div>
 
+        </div>
+        <div className={classes["card__footer"]}>
+
+
+        <Button onClick={()=>props.onShowServiceModal(props.id)}>En savoir +</Button>
+        </div>
     </div>
 }
 export default Service;

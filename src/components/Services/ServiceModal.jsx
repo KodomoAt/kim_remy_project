@@ -15,6 +15,7 @@ const ServiceModal = (props) => {
             <div className={classes["modal__header__img"]}>
                 <img src={props.service.imgURL} alt=""/>
             </div>
+
             <div>
                 <Badge element={props.service.price} img={price} imgDescription={"Etiquette de prix"}/>
                 <Badge element={props.service.duration} img={sablier} imgDescription={"Sablier"}/>

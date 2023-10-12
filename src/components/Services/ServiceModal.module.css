@@ -17,7 +17,7 @@
 
 }
 .modal__header__img img{
-    width:90%;
+    width:100%;
     height: auto;
     border-radius: 30px;
 }
@@ -44,12 +44,12 @@
     }
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape)  {
     .modal-header{
          margin-top: 1rem;
     }
     .modal__header__img img{
-        width:50%;
+
         height: auto;
         border-radius: 30px;
     }
