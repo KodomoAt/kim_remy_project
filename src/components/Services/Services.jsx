@@ -5,7 +5,6 @@ import Service from "./Service.jsx";
 import ServiceModal from "./ServiceModal.jsx";
 
 const Services = (props) => {
-    console.log(import.meta.env.VITE_FIREBASE_REALTIME_DATABASE_URL)
     const [services, setServices] = useState([]);
     const [serviceSelected, setServiceSelected] = useState({})
     const [isLoading, setIsLoading] = useState(false);
@@ -29,6 +28,7 @@ const Services = (props) => {
         setIsLoading(true);
         setError(null);
         try {
+            console.log(import.meta.env.VITE_FIREBASE_REALTIME_DATABASE_URL)
             const response = await axios.get(import.meta.env.VITE_FIREBASE_REALTIME_DATABASE_URL);
 
 
