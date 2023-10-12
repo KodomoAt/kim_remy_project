@@ -16,7 +16,7 @@ export const ContactForm = () => {
     const onSubmit = async (data, e) => {
         try {
 
-            await emailjs.sendForm(import.meta.env.EMAIL_JS_SERVICE_ID, import.meta.env.EMAIL_JS_TEMPLATE_ID, e.target, import.meta.env.EMAIL_JS_PUBLIC_KEY)
+            await emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, e.target, import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
 
             reset()
             console.log(isSubmitSuccessful)
