@@ -2,9 +2,11 @@ import classes from './ContactForm.module.css';
 import {useForm} from "react-hook-form"
 import Button from "../UI/Button.jsx";
 import emailjs from '@emailjs/browser';
+import {Alert} from "../UI/Alert.jsx";
+import {useEffect, useState} from "react";
 
 export const ContactForm = () => {
-
+    const [showAlert, setShowAlert] = useState(false)
     const {
         register,
         handleSubmit,
@@ -13,6 +15,16 @@ export const ContactForm = () => {
 
         formState: {errors, isSubmitSuccessful, isSubmitting},
     } = useForm()
+    useEffect(() => {
+        if (isSubmitSuccessful) {
+            setShowAlert(true);
+            setTimeout(() => {
+                setShowAlert(false);
+            }, 10000);
+        }
+
+
+    }, [isSubmitSuccessful]);
     const onSubmit = async (data, e) => {
         try {
 
@@ -27,7 +39,8 @@ export const ContactForm = () => {
 
     }
     return <div className={classes['contact-form']}>
-        {isSubmitSuccessful && <span className="loader">Votre message a bien été envoyé</span>}
+        {isSubmitSuccessful && showAlert && <Alert onClick={() => setShowAlert(false)}>Message bien envoyé ! </Alert>}
+
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className={classes["form-group"]}>
                 <label htmlFor="name">Nom complet</label>
@@ -83,8 +96,8 @@ export const ContactForm = () => {
                 {errors.phone && <p className={classes['form-control__alert']}>{errors.phone.message}</p>}
             </div>
             <div className={classes["form-group"]}>
-                <label htmlFor="object">Objet</label>
-                <input className={classes['form-control']} {...register("object", {
+                <label htmlFor="subject">Objet</label>
+                <input className={classes['form-control']} {...register("subject", {
                     maxLength: {
                         value: 60,
                         message: "⚠️ Trop de caractères"
@@ -94,7 +107,7 @@ export const ContactForm = () => {
                         message: "⚠️ Veuillez saisir un objet"
                     }
                 })} type="text" placeholder="Objet de votre demande"/>
-                {errors.object && <p className={classes['form-control__alert']}>{errors.object.message}</p>}
+                {errors.subject && <p className={classes['form-control__alert']}>{errors.subject.message}</p>}
             </div>
             <div className={classes["form-group"]}>
                 <label htmlFor="message">Message</label>

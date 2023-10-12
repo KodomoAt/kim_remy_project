@@ -60,6 +60,12 @@
 
 }
 
+.contact-form button{
+   margin-bottom: .7rem;
+    margin-top: .7rem;
+
+}
+
 .form-control__alert{
     color: red;
     text-align: left;

@@ -14,12 +14,14 @@ export const ContactInfos = () => {
 
                 <div className={classes['contact-infos__content__address']}>
 
-                    <p><GiPositionMarker size={"1.5rem"} style={{color: "#395A5F", verticalAlign: 'middle'}}/> 22 impasse
+                    <p><GiPositionMarker size={"1.5rem"} style={{color: "#395A5F", verticalAlign: 'middle'}}/> 22
+                        impasse
                         des Châtaigniers, 19560 ST HILAIRE PEYROUX</p>
                 </div>
                 <div className={classes['contact-infos__content__phone']}>
                     <span></span>
-                    <p><AiFillPhone size={"1.5rem"} style={{color: "#395A5F", verticalAlign: 'middle'}}/> <a href="tel:0686427949">
+                    <p><AiFillPhone size={"1.5rem"} style={{color: "#395A5F", verticalAlign: 'middle'}}/> <a
+                        href="tel:0686427949">
                         06.86.42.79.49
                     </a>
                     </p>
@@ -27,8 +29,9 @@ export const ContactInfos = () => {
                 <
                     div className={classes['contact-infos__content__email']}>
                     <span></span>
-                    <p><MdAlternateEmail size={"1.5rem"} style={{color: "#395A5F", verticalAlign: 'middle'}}/> <a href={"mailto: cristal.remy@gmail.com"}>
-                          cristal.remy@gmail.com
+                    <p><MdAlternateEmail size={"1.5rem"} style={{color: "#395A5F", verticalAlign: 'middle'}}/> <a
+                        href={"mailto: cristal.remy@gmail.com"}>
+                        cristal.remy@gmail.com
                     </a>
                     </p>
                 </div>
