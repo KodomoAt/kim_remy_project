@@ -28,3 +28,25 @@
         width: 2rem;
     }
 }
+
+.paragraph{
+    padding: 1rem;
+
+}
+
+.paragraph p{
+    text-align: justify;
+}
+.paragraph img{
+    float: left;
+    max-width: 400px;
+    margin-right: 30px;
+    border-radius: 30px;
+}
+
+@media screen and (max-width:720px ) {
+    .paragraph img{
+        float: none;
+
+    }
+}
