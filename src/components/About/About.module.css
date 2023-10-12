@@ -29,24 +29,38 @@
     }
 }
 
-.paragraph{
+.paragraph--left,
+.paragraph--right {
     padding: 1rem;
 
 }
 
-.paragraph p{
+.paragraph--left p,
+.paragraph--right p{
     text-align: justify;
 }
-.paragraph img{
-    float: left;
+.paragraph--left img,
+.paragraph--right img{
     max-width: 400px;
-    margin-right: 30px;
     border-radius: 30px;
+}
+.paragraph--left img{
+    float: left;
+    margin-right: 30px;
+}
+
+.paragraph--right img{
+    float: right;
+    margin-left: 30px;
 }
 
 @media screen and (max-width:720px ) {
-    .paragraph img{
+    .paragraph--left img,
+    .paragraph--right img{
         float: none;
+        margin-right: 0;
+        margin-left: 0;
+        max-width: 100%;
 
     }
 }
