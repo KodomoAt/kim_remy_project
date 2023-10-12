@@ -13,9 +13,11 @@
 .modal {
     position: fixed;
     top: 10vh;
-    left: 10%;
-    width: 80%;
-    height: 80%;
+    left: 30%;
+    width: 40%;
+    max-width: 550px;
+    max-height: 800px;
+    padding: 2rem;
     background-color: #fff;
     border-radius: 30px;
     display: flex;
@@ -40,7 +42,7 @@
 @media (orientation: landscape) {
     .modal {
         top: 4vh;
-        height: 90%;
+height: 90%;
     }
 }
 
@@ -49,7 +51,19 @@
         top: 5vh;
         left: 5%;
         margin: auto;
-        width: 90%;
+        width: 80%;
+
+
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .modal {
+      left: 10%;
+        width: 80%;
+        padding: 1rem;
+        max-width: none;
 
 
     }
