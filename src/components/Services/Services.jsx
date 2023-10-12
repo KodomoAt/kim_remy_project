@@ -28,7 +28,7 @@ const Services = (props) => {
         setIsLoading(true);
         setError(null);
         try {
-            const response = await axios.get('https://kimremy-d0827-default-rtdb.europe-west1.firebasedatabase.app/services.json');
+            const response = await axios.get(import.meta.env.DATABASE_URL);
 
 
             const data = await response.data;

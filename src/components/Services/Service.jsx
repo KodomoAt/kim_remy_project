@@ -3,6 +3,7 @@ import Badge from "../UI/Badge.jsx";
 import price from "../../assets/UI/badge_price.png";
 import sablier from "../../assets/UI/badge_sablier.png";
 import people from "../../assets/UI/badge_people.png";
+import Button from "../UI/Button.jsx";
 
 const Service = (props) => {
     return <div className={classes.card}>
@@ -26,7 +27,9 @@ const Service = (props) => {
             <div>
                 {props.shortDescription}
             </div>
+            <Button onClick={()=>props.onShowServiceModal(props.id)}>En savoir +</Button>
         </div>
+
     </div>
 }
 export default Service;

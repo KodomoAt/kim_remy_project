@@ -4,6 +4,7 @@
     max-width: 30rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-self:stretch;
     transition: transform .3s ease-in-out;
 
@@ -36,6 +37,14 @@
 
 .card__content{
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.card__content button{
+    margin-top: .5rem;
+    width: 70%;
 }
 .card__content__title{
     font-size: 1.1rem;
