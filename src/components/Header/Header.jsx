@@ -51,7 +51,7 @@ const Header = () => {
             <Menu activeSection={activeSection} onActiveSectionHandler={activeSectionHandler}/>
         </div>
 
-        <BookingBtn/>
+        <BookingBtn onActiveSectionHandler={activeSectionHandler}/>
         <BurgerBtn isOpen={isOpen} onClick={clickOpenHandler} />
         <ResponsiveMenu onClick={clickOpenHandler} isOpen={isOpen} activeSection={activeSection} onActiveSectionHandler={activeSectionHandler}/>
 

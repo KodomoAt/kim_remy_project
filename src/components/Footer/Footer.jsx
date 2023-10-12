@@ -6,8 +6,8 @@ const Footer = () => {
   return <footer>
       <div className={classes.footer}>
           <div className={classes.row}>
-              <a href="#"><i className="fa fa-facebook"><img src={facebook} alt=""/></i></a>
-              <a href="#"><i className="fa fa-instagram"><img src={instagram} alt=""/></i></a>
+              <a href="https://www.facebook.com/kimremyenergie" rel={'noopener'} target={'_blank'}><i className="fa fa-facebook"><img src={facebook} alt=""/></i></a>
+              <a href="https://www.instagram.com/kim.remy.energie/" rel={'noopener'}target={"_blank"}><i className="fa fa-instagram"><img src={instagram} alt=""/></i></a>
 
           </div>
 
