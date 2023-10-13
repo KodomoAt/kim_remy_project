@@ -1,5 +1,6 @@
 import classes from './DescriptionHeroSection.module.css'
 import Button from "../UI/Button.jsx";
+import {NavLink} from "react-router-dom";
 
 const DescriptionHeroSection = () => {
     return <>
@@ -20,7 +21,7 @@ const DescriptionHeroSection = () => {
 
         </div>
         <div className={classes['hero_section__button']}>
-            <Button>En savoir plus</Button>
+            <Button><NavLink to={'about'}>En savoir plus</NavLink></Button>
         </div>
     </>
 
