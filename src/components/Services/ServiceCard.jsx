@@ -1,16 +1,19 @@
-import classes from "./Service.module.css";
+import classes from "./ServiceCard.module.css";
 import Badge from "../UI/Badge.jsx";
 import price from "../../assets/UI/badge_price.png";
 import sablier from "../../assets/UI/badge_sablier.png";
 import people from "../../assets/UI/badge_people.png";
 import Button from "../UI/Button.jsx";
+import {Link, useNavigate} from "react-router-dom";
 
-const Service = (props) => {
+const ServiceCard = (props) => {
+    const navigate = useNavigate();
     return <div className={classes.card}>
 
-        <a onClick={()=>props.onShowServiceModal(props.id)}>
+        {/*<a onClick={()=>props.onShowServiceModal(props.id)}>*/}
+        <Link to={'/services/' + props.id}>
             <img src={props.imgURL} alt={props.imgDescription}/>
-        </a>
+        </Link>
 
         <div>
             <Badge element={props.price} img={price} imgDescription={"Etiquette de prix"}/>
@@ -19,11 +22,11 @@ const Service = (props) => {
         </div>
 
         <div className={classes["card__content"]}>
-            <a onClick={()=>props.onShowServiceModal(props.id)} className={classes['card__content__title']}>
+            <Link to={'/services/' + props.id} className={classes['card__content__title']}>
                 <h4>
                     {props.title}
                 </h4>
-            </a>
+            </Link>
             <div>
                 {props.shortDescription}
             </div>
@@ -32,8 +35,8 @@ const Service = (props) => {
         <div className={classes["card__footer"]}>
 
 
-        <Button onClick={()=>props.onShowServiceModal(props.id)}>En savoir +</Button>
+        <Button onClick={() => navigate('/services/' + props.id + '/')}>En savoir +</Button>
         </div>
     </div>
 }
-export default Service;
+export default ServiceCard;

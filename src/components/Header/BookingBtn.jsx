@@ -1,7 +1,9 @@
 import Button from "../UI/Button.jsx";
+import {useNavigate} from "react-router-dom";
 
 const BookingBtn = (props) => {
-    return <Button onClick={() => props.onActiveSectionHandler('contact')}>
+    const navigate = useNavigate();
+    return <Button onClick={() => navigate('/contact')}>
         Prendre rdv
     </Button>
 };

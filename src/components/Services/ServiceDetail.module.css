@@ -1,0 +1,30 @@
+.service__detail__img{
+    max-width: 700px;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+
+}
+
+@media screen and (max-width: 768px) {
+    .service__detail__img{
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .service__detail__img{
+        max-width: 300px;
+
+    }
+    .service__title{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .service__detail__img{
+        max-width: 100%;
+    }
+
+}
