@@ -4,6 +4,7 @@ import {AiFillPhone} from 'react-icons/ai'
 import {MdAlternateEmail} from 'react-icons/md'
 
 export const ContactInfos = () => {
+    const contact = {email: import.meta.env.VITE_EMAIL_CONTACT, phone:  import.meta.env.VITE_PHONE_CONTACT}
     return <>
         <div className={classes['contact-infos']}>
             <div className={classes['contact-infos__title']}>
@@ -21,8 +22,8 @@ export const ContactInfos = () => {
                 <div className={classes['contact-infos__content__phone']}>
                     <span></span>
                     <p><AiFillPhone size={"1.5rem"} style={{color: "#395A5F", verticalAlign: 'middle'}}/> <a
-                        href="tel:0686427949">
-                        06.86.42.79.49
+                        href={`tel:${contact.phone}`}>
+                        {contact.phone}
                     </a>
                     </p>
                 </div>
@@ -30,8 +31,8 @@ export const ContactInfos = () => {
                     div className={classes['contact-infos__content__email']}>
                     <span></span>
                     <p><MdAlternateEmail size={"1.5rem"} style={{color: "#395A5F", verticalAlign: 'middle'}}/> <a
-                        href={"mailto: cristal.remy@gmail.com"}>
-                        cristal.remy@gmail.com
+                        href={`mailto: ${contact.email}`}>
+                        {contact.email}
                     </a>
                     </p>
                 </div>

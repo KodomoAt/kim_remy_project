@@ -4,22 +4,23 @@ import email from '../../assets/hero/email.png'
 import address from '../../assets/hero/address.png'
 
 const ContactHeroSection = () => {
+    const contact = {email: import.meta.env.VITE_EMAIL_CONTACT, phone:  import.meta.env.VITE_PHONE_CONTACT, address: '12 rue des lilas, 75018 Paris'}
     return <div className={classes.contact}>
         <div>
             <div>
                 <div>
                     <img src={phone} alt="Icône représentant un téléphone"/>
                 </div>
-                <a href="tel:0686427949">
-                    06.86.42.79.49
+                <a href={`tel:${contact.phone}`}>
+                    {contact.phone}
                 </a>
             </div>
             <div>
                 <div>
                     <img src={email} alt="Icône représentant le signe @ d'une adresse e-mail"/>
                 </div>
-                <a href={"mailto: cristal.remy@gmail.com"}>
-                    cristal.remy@gmail.com
+                <a href={`mailto: ${contact.email}`}>
+                    {contact.email}
                 </a>
             </div>
         </div>

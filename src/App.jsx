@@ -8,6 +8,7 @@ import {loader as loaderServices} from "./pages/RootPage.jsx";
 import {ServicePage} from "./pages/ServicePage.jsx";
 import {RootServices} from "./pages/RootServices.jsx";
 import {ContactPage} from "./pages/ContactPage.jsx";
+import {action as ActionSendEmail} from "./pages/ContactPage.jsx";
 
 function App() {
     const router = createBrowserRouter([
@@ -27,7 +28,7 @@ function App() {
 
 
                 {path: 'about', element: <AboutPage/>},
-                {path: 'contact', element: <ContactPage/>}
+                {path: 'contact', element: <ContactPage/>, action: ActionSendEmail}
             ]
         }
     ]);

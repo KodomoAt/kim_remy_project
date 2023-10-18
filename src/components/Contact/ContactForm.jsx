@@ -1,12 +1,15 @@
 import classes from './ContactForm.module.css';
 import {useForm} from "react-hook-form"
-import Button from "../UI/Button.jsx";
-import emailjs from '@emailjs/browser';
 import {Alert} from "../UI/Alert.jsx";
 import {useEffect, useState} from "react";
+import { useSubmit, Form} from "react-router-dom";
+import ButtonContact from "../UI/ButtonContact.jsx";
+
+
 
 export const ContactForm = () => {
-    const [showAlert, setShowAlert] = useState(false)
+    const [showAlert, setShowAlert] = useState(false);
+
     const {
         register,
         handleSubmit,
@@ -25,23 +28,22 @@ export const ContactForm = () => {
 
 
     }, [isSubmitSuccessful]);
-    const onSubmit = async (data, e) => {
-        try {
 
-            await emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, e.target, import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
+    const submit = useSubmit()
 
-            reset()
-            console.log(isSubmitSuccessful)
-        } catch (error) {
-            console.log(error)
-        }
 
+
+    const submitHandler = async (data,e) => {
+
+        await submit(e.target, {method:'POST', action: '/contact'})
+        reset();
 
     }
+
     return <div className={classes['contact-form']}>
         {isSubmitSuccessful && showAlert && <Alert onClick={() => setShowAlert(false)}>Message bien envoyé ! </Alert>}
 
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <Form onSubmit={handleSubmit(submitHandler)} >
             <div className={classes["form-group"]}>
                 <label htmlFor="name">Nom complet</label>
                 <input className={classes['form-control']} {...register("name", {
@@ -80,7 +82,7 @@ export const ContactForm = () => {
                 <label htmlFor="phone">Téléphone</label>
                 <input className={classes['form-control']} {...register("phone", {
                     maxLength: {
-                        value: 10,
+                        value: 12,
                         message: "⚠️ Trop de caractères"
                     },
                     required: {
@@ -88,7 +90,7 @@ export const ContactForm = () => {
                         message: "⚠️ Veuillez saisir votre numéro de téléphone"
                     },
                     // pattern: {
-                    //     value: /^(\+33\s[1-9]{8})|(0[1-9]\s{8})$/,
+                    //     value: /^((\+|00)33|0)1-9{4}$/,
                     //     message: '⚠️ Veuillez saisir un numéro de téléphone valide'
                     //
                     // }
@@ -123,8 +125,7 @@ export const ContactForm = () => {
                 })} placeholder={`Votre message (maximum 350 caractères)`}></textarea>
                 {errors.message && <p className={classes['form-control__alert']}>{errors.message.message}</p>}
             </div>
-
-            <Button type={'submit'}>Envoyer {isSubmitting && <span className={classes.loader}></span>}</Button>
-        </form>
+            <ButtonContact >Envoyer {isSubmitting && <span className={classes.loader}></span>}</ButtonContact>
+        </Form>
     </div>
 };
